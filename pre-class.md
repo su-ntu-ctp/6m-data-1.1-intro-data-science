@@ -1,7 +1,19 @@
 # **📚 Pre-Study: The Data Science Hierarchy of Needs**
 
-Instructions:  
-Before Class 2 begins, please read the provided article ["The Data Science Hierarchy of Needs"](https://medium.com/@hugh_data_science/the-pyramid-of-data-needs-and-why-it-matters-for-your-career-b0f695c13f11) . Then, use NotebookLM to deepen your understanding.
+* **The Analogy:** Think of building an AI like building a house. You cannot put on the roof (AI) until you have a foundation (Data Collection) and walls (Data Cleaning).  
+* **Reference Article:** Read "The Data Science Hierarchy of Needs" by Monica Rogati (Search for this title on Google/Medium).
+
+**The AI vs. DS vs. Analytics Table**
+
+| Feature | Data Analytics | Data Science | Artificial Intelligence |
+| :---- | :---- | :---- | :---- |
+| **Goal** | Explain what happened in the past. | Predict what will happen next. | Automate decisions like a human. |
+| **Question** | "Why did sales drop in June?" | "How many sales will we have in July?" | "Automatically re-order stock when low." |
+| **Analogy** | The Rear-view Mirror | The Weather Forecast | The Self-Driving Car |
+
+**Exercise** 
+
+* Before Class 2 begins, please read the provided article ["The Data Science Hierarchy of Needs"](https://medium.com/@hugh_data_science/the-pyramid-of-data-needs-and-why-it-matters-for-your-career-b0f695c13f11) . Then, use NotebookLM to deepen your understanding.
 
 ## **🤖 NotebookLM Prompt Guide**
 
