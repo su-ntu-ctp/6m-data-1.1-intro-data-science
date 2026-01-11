@@ -30,3 +30,6 @@ Break into small groups and answer the following. Use your knowledge of Structur
 ### **Part 4: Ethics (The "Bubble")**
 
 * *Is it ethical for an algorithm to only show you things it knows you will like? Does this create a 'content bubble' that limits your exposure to new ideas?*
+
+## **💡Please Share Your Answers & Thoughts in Discord💡**
+
