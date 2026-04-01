@@ -31,7 +31,7 @@ By the end of this lesson, you will be able to:
 |----------|-------------|-----------|
 | [Pre-Class](./pre-class.md) | The Data Science Hierarchy of Needs — concepts & self-study | 30–45 min |
 | [Lesson Plan](./lesson.md) | Instructor guide for the 3-hour flipped classroom session | 3 hours |
-| [Post-Class](./post-class.md) | Netflix Case Study — group discussion & ethics analysis | 45–60 min |
+| [Post-Class](./assignment.md) | Netflix Case Study — group discussion & ethics analysis | 45–60 min |
 | [Reference](./reference.md) | Glossary, key readings, and further resources | As needed |
 
 ---

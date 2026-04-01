@@ -174,5 +174,5 @@ Recognise sources of ethical bias in data collection and explain why technically
 3. **Clean data ≠ Unbiased data.** Historical and selection biases are encoded in data that looks perfectly formatted.
 
 ### Next Steps
-- **Post-Class:** Complete the [Netflix Case Study](./post-class.md) — group discussion questions about the data lifecycle (45–60 min).
+- **Post-Class:** Complete the [Netflix Case Study](./assignment.md) — group discussion questions about the data lifecycle (45–60 min).
 - **Next Lesson:** Lesson 1.2 dives into database design — how data is structurally organised before it can be queried.
