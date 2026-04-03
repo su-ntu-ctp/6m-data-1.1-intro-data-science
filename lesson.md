@@ -1,44 +1,37 @@
-# 🎓 Lesson 1.1: Intro to Data Science — Instructor Guide
+# 📚 Lesson 1.1: The Data Landscape
 
 ## Session Overview
 
-| Item | Detail |
-|------|--------|
+| | |
+|---|---|
 | **Duration** | 3 hours |
-| **Format** | Flipped Classroom + Discussion-Based Learning |
-| **Prerequisites** | Pre-class reading on the Data Science Hierarchy of Needs |
-| **Tools** | No software required — whiteboard, slides, and discussion |
+| **Format** | Flipped Classroom + Discussion |
+| **Tools** | Google Colab (for code demo) |
+| **Prerequisite** | Pre-class reading on the Data Science Hierarchy of Needs |
 
-### Agenda
+## Agenda
 
-| Time | Section | Focus |
-|------|---------|-------|
-| 0:00 – 0:55 | Part 1: The Hierarchy of Insights | Analytics vs. Data Science vs. AI |
-| 0:55 – 1:00 | Break | — |
-| 1:00 – 1:55 | Part 2: The Data Highway | Data Pipeline; Structured vs. Unstructured data |
-| 1:55 – 2:00 | Break | — |
-| 2:00 – 2:55 | Part 3: The Conscious Algorithm | Ethics, Bias, and Garbage In, Garbage Out |
-| 2:55 – 3:00 | Wrap-Up | Key Takeaways & Post-Class Assignment Briefing |
+| Time | Part | Topic |
+|------|------|-------|
+| 0:00 – 1:00 | Part 1 | The Hierarchy of Insights — Analytics vs. Data Science vs. AI |
+| 1:00 – 2:00 | Part 2 | The Data Highway — Pipelines & Data Structures |
+| 2:00 – 3:00 | Part 3 | The Conscious Algorithm — Ethics & Bias |
 
 ---
 
-## 🏃 Part 1: The Hierarchy of Insights (55 min)
+## 🏃 Part 1: The Hierarchy of Insights (60 min)
 
 ### 🎯 Learning Objective
-Explain the difference between Data Analytics, Data Science, and Artificial Intelligence using real-world analogies.
+Explain the difference between Data Analytics, Data Science, and Artificial Intelligence.
 
-### 📖 Theory Recap (10 min)
+### Concept Overview (10 min)
 
 **Analogy:** Imagine a kitchen.
-- **Data Analytics** checks the fridge and reports what was eaten *(Historical — "What happened?")*
-- **Data Science** predicts what ingredients you'll need next week *(Predictive — "What will happen?")*
-- **AI** automatically orders groceries when the fridge is empty *(Automated Action — "Do it without me.")*
+- **Data Analytics** is checking the fridge to see what's left and writing a report on what was eaten (Historical).
+- **Data Science** is using that list to predict what ingredients you'll need for next week's dinner (Predictive).
+- **AI** is a robot chef that sees the fridge is empty and orders the groceries for you (Automated Action).
 
-| | Data Analytics | Data Science | Artificial Intelligence |
-|--|---|---|---|
-| **Goal** | Explain past events | Predict future outcomes | Automate human-like decisions |
-| **Question** | "Why did sales drop?" | "How many sales next month?" | "Auto-reorder when stock is low" |
-| **Analogy** | Rear-view mirror | Weather forecast | Self-driving car |
+### 🛠️ Workshop: "The Company Diagnostic" (40 min)
 
 **The Matrix (20 min):** Students evaluate 5 scenarios and classify each as Analytics, Data Science, or AI:
 1. Fraud detection system that flags unusual transactions automatically
@@ -53,109 +46,114 @@ Explain the difference between Data Analytics, Data Science, and Artificial Inte
 
 **Scenario:** A CEO wants to implement GPT-4 across their company, but all their data is in paper files.
 
-**Discussion Questions:**
-- "If the CEO scans all paper files to PDFs, can they build AI tomorrow? What steps are still missing?"
-- "Which of these scenarios would fail without the cleaning step?"
+# Predict next month's sales (March) based on February's sales and the growth rate
+predicted_sales_march = df['Sales'].iloc[1] * (1 + growth_rate)
+
+print(f"\nPredicted sales for March: {predicted_sales_march:.2f}")
+```
 
 ### 💬 Q&A & Reflection (10 min)
 
-- **Common Misconception:** "Does AI replace Data Science?" → No. AI *applies* the discoveries that Data Science makes. You need Data Scientists to build, monitor, and improve AI systems.
-- **Business Case:** Netflix uses Analytics for billing (historical), Data Science for recommendations (predictive), and AI for auto-playing the next episode (automated action). All three coexist.
+- Does AI replace Data Science — or depend on it?
+- How does Netflix use Analytics, Data Science, and AI differently in its product?
 
 ---
 
-## 🏃 Part 2: The Data Highway (55 min)
+## 🏃 Part 2: The Data Highway (60 min)
 
 ### 🎯 Learning Objective
-Identify the 4 stages of a standard Data Pipeline and distinguish between Structured, Unstructured, and Semi-Structured data.
+Identify the 4 stages of a Data Pipeline and distinguish between Structured, Unstructured, and Semi-Structured data.
 
-### 📖 Theory Recap (10 min)
+### Concept Overview (10 min)
 
 **The Pipeline:** Collection ➔ Cleaning ➔ Analysis ➔ Visualisation
 
 **Data Structure Analogy:**
-- **Structured:** An egg carton — fixed slots, predictable format, easily queried (spreadsheets, databases)
-- **Unstructured:** A bag of groceries — mixed items with no fixed schema (images, audio, free text)
-- **Semi-structured:** A recipe card — has some structure but flexible (JSON, XML, logs)
+- **Structured:** Think of an Egg Carton — everything has a specific slot/cell.
+- **Unstructured:** Think of a bag of groceries — items are all mixed up; you have to sort them yourself.
+- **Semi-Structured:** In-between — has some organisation but no rigid schema (e.g. JSON).
 
-### 🛠️ Hands-On Activity 1: "The Smart Watch Data Pipeline" (15 min)
+### 🛠️ Activity 1: "The Smart Watch Data Pipeline" (20 min)
 
-**Scenario:** Design the data flow for a Sleep Tracker app.
+**Scenario:** You are designing the data flow for a "Sleep Tracker" app.
 
-**Task:** Complete the pipeline stages table for a wearable heart rate monitor:
+**Task:** Fill in the blanks below with your group.
 
-| Stage | What Happens | Potential Failure |
-|-------|-------------|-------------------|
-| Collection | Heart rate sensor records BPM every 5 seconds | Watch removed; battery dies |
-| Cleaning | Handle data gaps and watch-removal periods | Nightstand time counted as sleep |
-| Analysis | Convert heartbeats into a "Sleep Score" | Algorithm miscalculates REM cycles |
-| Visualisation | Display results on user's phone | Misleading chart scale |
+| Pipeline Stage | What happens here? (Specific to a Smart Watch) |
+|:---|:---|
+| **1. Collection** | *Example: Heart rate sensor records BPM every 5 seconds...* |
+| **2. Cleaning** | *(What if the user takes the watch off? What if the battery dies mid-night?)* |
+| **3. Analysis** | *(How do we turn raw heartbeats into a "Sleep Score"? What is the math?)* |
+| **4. Visualisation** | *(What does the user actually see on their phone screen?)* |
 
-**Discussion:** How does a Cleaning failure in stage 2 corrupt the Visualisation in stage 4?
+**Discussion Question:**
 
-### 🛠️ Hands-On Activity 2: "Data Binning" (20 min)
+If the "Cleaning" stage fails (e.g., we count the time the watch was on the nightstand as "Deep Sleep"), how does that ruin the "Visualisation"?
 
-**Task:** Categorise these hospital data items as Structured, Unstructured, or Semi-Structured:
+### 🛠️ Activity 2: "Data Binning" (20 min)
 
-1. Patient Name ("John Doe") → *Structured*
-2. Chest X-Ray image file → *Unstructured*
-3. Doctor's handwritten notes → *Unstructured*
-4. Patient Age (34) → *Structured*
-5. Blood Type (O+) → *Structured*
-6. Audio recording of consultation → *Unstructured*
-7. JSON heart monitor log `{"bpm": 80, "time": "12:00"}` → *Semi-Structured*
+**Task 1:** Categorise each of the following hospital data items as Structured, Unstructured, or Semi-Structured:
 
-**Bonus Discussion:** How would you convert doctor's notes (unstructured) into structured data for analysis?
+1. Patient Name ("John Doe")
+2. X-Ray Image (chest_scan_001.jpg)
+3. Doctor's handwritten notes on a clipboard
+4. Patient Age (34)
+5. Blood Type (O+)
+6. Audio recording of a patient consultation
+7. JSON log from a heart monitor `{"bpm": 80, "time": "12:00"}` *(Tricky — discuss!)*
+
+**Question:** How can you convert Unstructured text (like a doctor's note) into Structured data? Give an example.
 
 ### 💬 Q&A & Reflection (10 min)
 
-- **Common Misconception:** "Is JSON structured or unstructured?" → Neither — it's **semi-structured**. It has internal organisation (key-value pairs) but no rigid, predefined schema like a relational database table.
-- **Business Case:** Data Scientists spend approximately **80% of their time in the Cleaning stage**. Mastering this step is one of the highest-leverage skills in the profession.
+- Is JSON structured or unstructured? Where does it sit on the spectrum?
+- Why do Data Scientists reportedly spend ~80% of their time in the Cleaning stage?
 
 ---
 
-## 🏃 Part 3: The Conscious Algorithm (55 min)
+## 🏃 Part 3: The Conscious Algorithm (60 min)
 
 ### 🎯 Learning Objective
-Recognise sources of ethical bias in data collection and explain why technically clean data can still produce biased outcomes.
+Recognise potential sources of ethical bias in data collection and understand how "Clean Data" can still be "Biased Data".
 
-### 📖 Theory Recap (10 min)
+### Concept Overview (10 min)
 
-**The Key Biases:**
-- **Selection Bias:** Your collected data doesn't represent the whole population (e.g., a survey only reaching smartphone users).
-- **Historical Bias:** Your data reflects past inequalities (e.g., 1970s hiring patterns where management was 95% male).
-- **Confirmation Bias:** You only collect data that confirms what you already believe.
+**Key Bias Types:**
+- **Selection Bias:** The data you collected doesn't represent the whole world.
+- **Historical Bias:** The data reflects past prejudices (e.g., hiring data from the 1970s).
+- **Garbage In, Garbage Out:** Perfect code cannot fix broken data.
 
-**The Rule:** Garbage In, Garbage Out — no amount of sophisticated modelling fixes fundamentally broken data. But even *clean* data can encode bias from the world it was collected in.
+### 🛠️ Workshop: "The Hiring Bot Post-Mortem" (40 min)
 
-### 🛠️ Hands-On Activity: "The Hiring Bot Post-Mortem" (35 min)
+**Scenario:**
 
-**Scenario:** A tech company built an AI resume screener trained on 10 years of "Top Performer" data — employees who were promoted to Manager.
+You build an AI to screen resumes for a tech company. You train it on the company's "Top Performer" data from the last 10 years.
 
-**The Result:** The AI automatically rejects candidates with nursing backgrounds and downgrades resumes containing "Women's College."
+- **The Data:** 10 years of resumes from employees promoted to Manager.
+- **The Result:** The AI starts rejecting all candidates from a nursing background and downgrades resumes containing the word "Women's College".
 
-**Group Discussion (25 min):**
-1. Why did the AI behave this way? Was the AI itself sexist, or was the data sexist?
-2. Was this a Data Collection error or an Analysis error?
-3. If you delete the "Gender" column from the training data, is the problem solved? Why or why not?
-4. Write a one-sentence **Warning Label** for this dataset.
+**Group Discussion:**
 
-**Share Out (10 min):** Groups present their Warning Labels. Discuss: what would responsible deployment of this tool look like?
+1. Why did the AI do this? Was the AI sexist, or was the *data* sexist?
+2. Was this a "Data Collection" error or an "Analysis" error?
+3. How would you fix this? *(Hint: Can you simply "delete" the gender column? Why might that not be enough?)*
+
+**Output:** Write a one-sentence "Warning Label" that should be placed on this dataset before any Data Scientist uses it.
 
 ### 💬 Q&A & Reflection (10 min)
 
-- **Common Misconception:** "If we just remove sensitive attributes (gender, race), the bias disappears." → Proxy variables (university name, postcode, name) encode the same information. Removing the label doesn't remove the signal.
-- **Business Case:** Amazon scrapped their AI recruiting tool in 2018 after discovering it systematically downgraded female candidates — exactly this scenario. The cost: years of engineering investment and significant reputational damage.
+- Can we ever have 100% unbiased data? If not, what can we do?
+- What is the cost — financial and reputational — when an AI system fails in a public-facing application?
 
 ---
 
-## 🎯 Wrap-Up (5 min)
+## 🎯 Wrap-Up
 
-### Key Takeaways
-1. **Analytics, Data Science, and AI** are a hierarchy — you need each layer before you can build the next. Most companies are still working on cleaning their data.
-2. **80% of data work** is Collection and Cleaning. The glamorous analysis and modelling is the remaining 20%.
-3. **Clean data ≠ Unbiased data.** Historical and selection biases are encoded in data that looks perfectly formatted.
+**Key Takeaways:**
+1. Analytics, Data Science, and AI are a hierarchy — most companies are still working on getting their data clean.
+2. ~80% of data work is Collection and Cleaning. The analysis is the remaining 20%.
+3. Clean data ≠ Unbiased data. Historical and selection biases are encoded in data that looks perfectly formatted.
 
-### Next Steps
-- **Post-Class:** Complete the [Netflix Case Study](./assignment.md) — group discussion questions about the data lifecycle (45–60 min).
-- **Next Lesson:** Lesson 1.2 dives into database design — how data is structurally organised before it can be queried.
+**Next Steps:**
+- Complete the [Assignment](./assignment.md) — group discussion questions about the data lifecycle.
+- Next lesson: Lesson 1.2 covers database design — how data is structurally organised before it can be queried.
