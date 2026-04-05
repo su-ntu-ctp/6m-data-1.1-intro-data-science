@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 820" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <style>
+    .label { font-size: 16px; font-weight: 600; fill: #1f2328; }
+    .desc { font-size: 12.5px; fill: #656d76; }
+    .prop { font-size: 12px; fill: #656d76; }
+    .check { fill: #1a7f37; }
+    .cross { fill: #cf222e; }
+    .card { fill: #f6f8fa; rx: 6; }
+    .card-title { font-size: 12px; fill: #656d76; }
+    .th { font-size: 10.5px; fill: #1f2328; font-weight: 500; }
+    .td { font-size: 10.5px; fill: #656d76; }
+    .code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 10.5px; fill: #656d76; }
+    .divider { stroke: #d0d7de; stroke-width: 0.5; }
+    .dot-s { fill: #85B7EB; }
+    .dot-semi { fill: #AFA9EC; }
+    .dot-u { fill: #F0997B; }
+    .blob { fill: #ffffff; stroke: #d0d7de; stroke-width: 0.5; rx: 4; }
+    .blob-text { font-size: 10.5px; fill: #656d76; text-anchor: middle; dominant-baseline: central; }
+  </style>
+
+  <!-- STRUCTURED -->
+  <rect x="18" y="16" width="12" height="12" rx="2" class="dot-s"/>
+  <text x="38" y="27" class="label">Structured data</text>
+
+  <text x="22" y="52" class="desc">Organised in fixed rows and columns with a predefined schema. Every record follows the same format.</text>
+  <text x="22" y="68" class="desc">Think: anything that fits neatly in a spreadsheet or relational database.</text>
+
+  <text x="22" y="92" class="prop"><tspan class="check">+</tspan> Easy to query (SQL)</text>
+  <text x="172" y="92" class="prop"><tspan class="check">+</tspan> Easy to analyse</text>
+  <text x="302" y="92" class="prop"><tspan class="cross">&#x2212;</tspan> Rigid schema</text>
+  <text x="422" y="92" class="prop"><tspan class="cross">&#x2212;</tspan> ~20% of all data</text>
+
+  <!-- Card 1: Relational databases -->
+  <rect x="22" y="108" width="270" height="100" class="card"/>
+  <text x="34" y="128" class="card-title">Relational databases</text>
+  <text x="34" y="150" class="th">ID</text><text x="94" y="150" class="th">Name</text><text x="184" y="150" class="th">Salary</text>
+  <line x1="34" y1="155" x2="268" y2="155" class="divider"/>
+  <text x="34" y="170" class="td">001</text><text x="94" y="170" class="td">Amir</text><text x="184" y="170" class="td">85,000</text>
+  <text x="34" y="188" class="td">002</text><text x="94" y="188" class="td">Priya</text><text x="184" y="188" class="td">92,000</text>
+
+  <!-- Card 2: Spreadsheets / CSV -->
+  <rect x="306" y="108" width="270" height="100" class="card"/>
+  <text x="318" y="128" class="card-title">Spreadsheets / CSV</text>
+  <text x="318" y="150" class="th">Date</text><text x="388" y="150" class="th">Region</text><text x="468" y="150" class="th">Sales</text>
+  <line x1="318" y1="155" x2="552" y2="155" class="divider"/>
+  <text x="318" y="170" class="td">Jan</text><text x="388" y="170" class="td">APAC</text><text x="468" y="170" class="td">1.2M</text>
+  <text x="318" y="188" class="td">Feb</text><text x="388" y="188" class="td">EMEA</text><text x="468" y="188" class="td">0.9M</text>
+
+  <!-- Card 3: Transaction logs -->
+  <rect x="590" y="108" width="270" height="100" class="card"/>
+  <text x="602" y="128" class="card-title">Transaction logs</text>
+  <text x="602" y="150" class="th">TxnID</text><text x="682" y="150" class="th">Amount</text><text x="772" y="150" class="th">Status</text>
+  <line x1="602" y1="155" x2="836" y2="155" class="divider"/>
+  <text x="602" y="170" class="td">T991</text><text x="682" y="170" class="td">$240</text><text x="772" y="170" class="td">Done</text>
+  <text x="602" y="188" class="td">T992</text><text x="682" y="188" class="td">$18</text><text x="772" y="188" class="td">Pending</text>
+
+  <!-- Divider -->
+  <line x1="22" y1="230" x2="878" y2="230" class="divider"/>
+
+  <!-- SEMI-STRUCTURED -->
+  <rect x="18" y="250" width="12" height="12" rx="2" class="dot-semi"/>
+  <text x="38" y="261" class="label">Semi-structured data</text>
+
+  <text x="22" y="286" class="desc">Has some organisational markers (tags, keys, nesting) but no rigid tabular schema. Records can have</text>
+  <text x="22" y="302" class="desc">different fields, nested objects, or varying depths. It sits between the two extremes.</text>
+
+  <text x="22" y="326" class="prop"><tspan class="check">+</tspan> Flexible schema</text>
+  <text x="172" y="326" class="prop"><tspan class="check">+</tspan> Machine-readable</text>
+  <text x="322" y="326" class="prop"><tspan class="cross">&#x2212;</tspan> Harder to query</text>
+  <text x="462" y="326" class="prop"><tspan class="cross">&#x2212;</tspan> Inconsistent structure</text>
+
+  <!-- Card 4: JSON -->
+  <rect x="22" y="342" width="270" height="120" class="card"/>
+  <text x="34" y="362" class="card-title">JSON</text>
+  <text x="34" y="384" class="code">{ "name": "Amir",</text>
+  <text x="34" y="400" class="code">  "skills": ["Python",</text>
+  <text x="34" y="416" class="code">    "SQL"],</text>
+  <text x="34" y="432" class="code">  "exp": 8</text>
+  <text x="34" y="448" class="code">}</text>
+
+  <!-- Card 5: XML / HTML -->
+  <rect x="306" y="342" width="270" height="120" class="card"/>
+  <text x="318" y="362" class="card-title">XML / HTML</text>
+  <text x="318" y="384" class="code">&lt;employee&gt;</text>
+  <text x="318" y="400" class="code">  &lt;name&gt;Priya&lt;/name&gt;</text>
+  <text x="318" y="416" class="code">  &lt;dept&gt;Eng&lt;/dept&gt;</text>
+  <text x="318" y="432" class="code">&lt;/employee&gt;</text>
+
+  <!-- Card 6: Emails / logs -->
+  <rect x="590" y="342" width="270" height="120" class="card"/>
+  <text x="602" y="362" class="card-title">Emails / logs</text>
+  <text x="602" y="384" class="code">From: amir@co.sg</text>
+  <text x="602" y="400" class="code">To: priya@co.sg</text>
+  <text x="602" y="416" class="code">Subject: Q3 data</text>
+  <text x="602" y="432" class="code">Body: See attached...</text>
+
+  <!-- Divider -->
+  <line x1="22" y1="484" x2="878" y2="484" class="divider"/>
+
+  <!-- UNSTRUCTURED -->
+  <rect x="18" y="504" width="12" height="12" rx="2" class="dot-u"/>
+  <text x="38" y="515" class="label">Unstructured data</text>
+
+  <text x="22" y="540" class="desc">No predefined format or schema at all. Cannot be stored in rows and columns without significant</text>
+  <text x="22" y="556" class="desc">transformation. This is the vast majority of data generated in the world — and the hardest to analyse at scale.</text>
+
+  <text x="22" y="580" class="prop"><tspan class="check">+</tspan> Rich information</text>
+  <text x="172" y="580" class="prop"><tspan class="check">+</tspan> ~80% of all data</text>
+  <text x="302" y="580" class="prop"><tspan class="cross">&#x2212;</tspan> Needs AI/NLP to process</text>
+  <text x="472" y="580" class="prop"><tspan class="cross">&#x2212;</tspan> Not directly queryable</text>
+
+  <!-- Card 7: Text & documents -->
+  <rect x="22" y="596" width="270" height="100" class="card"/>
+  <text x="34" y="616" class="card-title">Text &amp; documents</text>
+  <text x="34" y="638" class="desc">Customer review: "The product</text>
+  <text x="34" y="654" class="desc">quality was good but delivery took</text>
+  <text x="34" y="670" class="desc">too long and support was unhelpful..."</text>
+
+  <!-- Card 8: Images & video -->
+  <rect x="306" y="596" width="270" height="100" class="card"/>
+  <text x="318" y="616" class="card-title">Images &amp; video</text>
+  <rect x="318" y="632" width="40" height="34" class="blob"/><text x="338" y="649" class="blob-text">JPG</text>
+  <rect x="366" y="632" width="40" height="34" class="blob"/><text x="386" y="649" class="blob-text">PNG</text>
+  <rect x="414" y="632" width="40" height="34" class="blob"/><text x="434" y="649" class="blob-text">MP4</text>
+  <rect x="462" y="632" width="40" height="34" class="blob"/><text x="482" y="649" class="blob-text">MRI</text>
+
+  <!-- Card 9: Audio & speech -->
+  <rect x="590" y="596" width="270" height="100" class="card"/>
+  <text x="602" y="616" class="card-title">Audio &amp; speech</text>
+  <rect x="602" y="632" width="40" height="34" class="blob"/><text x="622" y="649" class="blob-text">WAV</text>
+  <rect x="650" y="632" width="40" height="34" class="blob"/><text x="670" y="649" class="blob-text">MP3</text>
+  <rect x="698" y="632" width="46" height="34" class="blob"/><text x="721" y="649" class="blob-text">Calls</text>
+  <rect x="752" y="632" width="46" height="34" class="blob"/><text x="775" y="649" class="blob-text">Pods</text>
+</svg>
