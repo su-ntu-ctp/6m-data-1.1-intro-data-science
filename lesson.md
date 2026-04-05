@@ -94,6 +94,8 @@ Identify the 4 stages of a Data Pipeline and distinguish between Structured, Uns
 - **Unstructured:** Think of a bag of groceries — items are all mixed up; you have to sort them yourself.
 - **Semi-Structured:** In-between — has some organisation but no rigid schema (e.g. JSON).
 
+![Structured, Semi-Structured & Unstructured Data](assets/structured_semi_unstructured_data_classification.html)
+
 ### 🛠️ Activity 1: "The Smart Watch Data Pipeline" (20 min)
 
 **Scenario:** You are designing the data flow for a "Sleep Tracker" app.

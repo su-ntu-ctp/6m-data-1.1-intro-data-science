@@ -1,0 +1,182 @@
+
+<style>
+.section { margin-bottom: 16px; }
+.header-row {
+  display: flex; align-items: center; gap: 10px;
+  margin-bottom: 8px;
+}
+.dot { width: 12px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+.label { font-size: 16px; font-weight: 500; color: var(--color-text-primary); }
+.desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 10px; padding-left: 22px; }
+.example-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px; padding-left: 22px;
+}
+.ex-card {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 10px 12px;
+  font-size: 13px; color: var(--color-text-primary);
+  line-height: 1.5;
+}
+.ex-icon { font-size: 13px; color: var(--color-text-secondary); display: block; margin-bottom: 2px; }
+.mini-table {
+  width: 100%; font-size: 11px; border-collapse: collapse;
+  margin-top: 6px;
+}
+.mini-table th, .mini-table td {
+  padding: 3px 6px; text-align: left;
+  border: 0.5px solid var(--color-border-tertiary);
+  color: var(--color-text-secondary);
+}
+.mini-table th { font-weight: 500; color: var(--color-text-primary); background: var(--color-background-primary); }
+.code-block {
+  font-family: var(--font-mono); font-size: 11px;
+  color: var(--color-text-secondary); line-height: 1.5;
+  margin-top: 6px; white-space: pre;
+}
+.blob {
+  display: flex; gap: 6px; align-items: center; margin-top: 6px; flex-wrap: wrap;
+}
+.blob-item {
+  width: 32px; height: 32px; border-radius: 4px;
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; color: var(--color-text-secondary);
+}
+.props {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  padding-left: 22px; margin-bottom: 12px;
+}
+.prop {
+  font-size: 12px; color: var(--color-text-secondary);
+  display: flex; align-items: center; gap: 4px;
+}
+.check { color: var(--color-text-success); font-size: 13px; }
+.cross { color: var(--color-text-danger); font-size: 13px; }
+.divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 16px 0; }
+
+.dot-s { background: #85B7EB; }
+.dot-semi { background: #AFA9EC; }
+.dot-u { background: #F0997B; }
+@media (prefers-color-scheme: dark) {
+  .dot-s { background: #378ADD; }
+  .dot-semi { background: #7F77DD; }
+  .dot-u { background: #D85A30; }
+}
+</style>
+
+<!-- STRUCTURED -->
+<div class="section">
+  <div class="header-row"><span class="dot dot-s"></span><span class="label">Structured data</span></div>
+  <div class="desc">Organised in fixed rows and columns with a predefined schema. Every record follows the same format. Think: anything that fits neatly in a spreadsheet or relational database.</div>
+  <div class="props">
+    <span class="prop"><span class="check">+</span> Easy to query (SQL)</span>
+    <span class="prop"><span class="check">+</span> Easy to analyse</span>
+    <span class="prop"><span class="cross">-</span> Rigid schema</span>
+    <span class="prop"><span class="cross">-</span> ~20% of all data</span>
+  </div>
+  <div class="example-grid">
+    <div class="ex-card">
+      <span class="ex-icon">Relational databases</span>
+      <table class="mini-table">
+        <tr><th>ID</th><th>Name</th><th>Salary</th></tr>
+        <tr><td>001</td><td>Amir</td><td>85,000</td></tr>
+        <tr><td>002</td><td>Priya</td><td>92,000</td></tr>
+      </table>
+    </div>
+    <div class="ex-card">
+      <span class="ex-icon">Spreadsheets / CSV</span>
+      <table class="mini-table">
+        <tr><th>Date</th><th>Region</th><th>Sales</th></tr>
+        <tr><td>Jan</td><td>APAC</td><td>1.2M</td></tr>
+        <tr><td>Feb</td><td>EMEA</td><td>0.9M</td></tr>
+      </table>
+    </div>
+    <div class="ex-card">
+      <span class="ex-icon">Transaction logs</span>
+      <table class="mini-table">
+        <tr><th>TxnID</th><th>Amount</th><th>Status</th></tr>
+        <tr><td>T991</td><td>$240</td><td>Done</td></tr>
+        <tr><td>T992</td><td>$18</td><td>Pending</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- SEMI-STRUCTURED -->
+<div class="section">
+  <div class="header-row"><span class="dot dot-semi"></span><span class="label">Semi-structured data</span></div>
+  <div class="desc">Has some organisational markers (tags, keys, nesting) but no rigid tabular schema. Records can have different fields, nested objects, or varying depths. It sits between the two extremes.</div>
+  <div class="props">
+    <span class="prop"><span class="check">+</span> Flexible schema</span>
+    <span class="prop"><span class="check">+</span> Machine-readable</span>
+    <span class="prop"><span class="cross">-</span> Harder to query</span>
+    <span class="prop"><span class="cross">-</span> Inconsistent structure</span>
+  </div>
+  <div class="example-grid">
+    <div class="ex-card">
+      <span class="ex-icon">JSON</span>
+      <div class="code-block">{ "name": "Amir",
+  "skills": ["Python",
+    "SQL"],
+  "exp": 8
+}</div>
+    </div>
+    <div class="ex-card">
+      <span class="ex-icon">XML / HTML</span>
+      <div class="code-block">&lt;employee&gt;
+  &lt;name&gt;Priya&lt;/name&gt;
+  &lt;dept&gt;Eng&lt;/dept&gt;
+&lt;/employee&gt;</div>
+    </div>
+    <div class="ex-card">
+      <span class="ex-icon">Emails / logs</span>
+      <div class="code-block">From: amir@co.sg
+To: priya@co.sg
+Subject: Q3 data
+Body: See attached...</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- UNSTRUCTURED -->
+<div class="section">
+  <div class="header-row"><span class="dot dot-u"></span><span class="label">Unstructured data</span></div>
+  <div class="desc">No predefined format or schema at all. Cannot be stored in rows and columns without significant transformation. This is the vast majority of data generated in the world — and the hardest to analyse at scale.</div>
+  <div class="props">
+    <span class="prop"><span class="check">+</span> Rich information</span>
+    <span class="prop"><span class="check">+</span> ~80% of all data</span>
+    <span class="prop"><span class="cross">-</span> Needs AI/NLP to process</span>
+    <span class="prop"><span class="cross">-</span> Not directly queryable</span>
+  </div>
+  <div class="example-grid">
+    <div class="ex-card">
+      <span class="ex-icon">Text &amp; documents</span>
+      <div style="font-size:12px;color:var(--color-text-secondary);margin-top:6px;line-height:1.5;">Customer review: "The product quality was good but delivery took too long and support was unhelpful..."</div>
+    </div>
+    <div class="ex-card">
+      <span class="ex-icon">Images &amp; video</span>
+      <div class="blob">
+        <div class="blob-item">JPG</div>
+        <div class="blob-item">PNG</div>
+        <div class="blob-item">MP4</div>
+        <div class="blob-item">MRI</div>
+      </div>
+    </div>
+    <div class="ex-card">
+      <span class="ex-icon">Audio &amp; speech</span>
+      <div class="blob">
+        <div class="blob-item">WAV</div>
+        <div class="blob-item">MP3</div>
+        <div class="blob-item" style="width:auto;padding:0 6px;">Calls</div>
+        <div class="blob-item" style="width:auto;padding:0 6px;">Pods</div>
+      </div>
+    </div>
+  </div>
+</div>
