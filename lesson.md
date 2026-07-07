@@ -45,7 +45,7 @@ Explain the difference between Data Analytics, Data Science, and Artificial Inte
 **Activity:**
 
 1. **The Matrix:** Classify each of the following 5 scenarios as Data Analytics, Data Science, or AI — and explain your reasoning:
-   - A bank system that automatically flags unusual transactions in real time
+   - A bank system that automatically freezes a card and alerts the customer the instant it detects an unusual transaction, with no analyst reviewing it first
    - A manager building a monthly pivot table of sales figures
    - A self-driving car that brakes automatically when it detects an obstacle
    - A model that predicts which customers are likely to churn next quarter
@@ -56,7 +56,7 @@ Explain the difference between Data Analytics, Data Science, and Artificial Inte
 
 | Scenario | Category | Reasoning |
 |---|---|---|
-| Bank system auto-flags unusual transactions | **AI** | The system acts autonomously in real time without human review of each case. It uses a model that makes decisions, not just predictions. |
+| Bank system auto-freezes card on unusual transactions | **AI** | The system doesn't just predict "this looks unusual" — it *acts* on that judgment in real time (freezing the card) with no analyst approving the decision first. Compare this to a system that only flags a transaction for a fraud analyst to review later: that would be Data Science, since a human still decides and acts. The action-without-human-review is what tips this into AI. |
 | Manager builds a monthly pivot table | **Data Analytics** | Purely historical and descriptive — it answers "what happened?" using existing data. No prediction, no automation. |
 | Self-driving car brakes automatically | **AI** | The car perceives its environment and takes autonomous action with no human in the loop. This is AI at its most literal. |
 | Model predicts which customers will churn | **Data Science** | It builds a predictive model from historical patterns to forecast a future outcome. A human still reviews and acts on the results. |
