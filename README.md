@@ -8,9 +8,9 @@
 
 | Section | Duration | Topic / Activity |
 |---------|----------|-----------------|
-| **Part 1: The Hierarchy of Insights** | 55 min | Analytics vs. Data Science vs. AI; The Hierarchy of Needs |
-| **Part 2: The Data Highway** | 55 min | The 4-stage Data Pipeline; Structured vs. Unstructured Data |
-| **Part 3: The Conscious Algorithm** | 55 min | Ethical Bias in Data; Garbage In, Garbage Out |
+| **Part 1: The Hierarchy of Insights** | 60 min | Analytics vs. Data Science vs. AI; The Hierarchy of Needs |
+| **Part 2: The Data Highway** | 60 min | The 4-stage Data Pipeline; Structured vs. Unstructured Data |
+| **Part 3: The Conscious Algorithm** | 60 min | Ethical Bias in Data; Garbage In, Garbage Out |
 
 ---
 
