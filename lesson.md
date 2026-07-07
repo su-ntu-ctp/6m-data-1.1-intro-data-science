@@ -103,9 +103,9 @@ Identify the 4 stages of a Data Pipeline and distinguish between Structured, Uns
 **The Pipeline:** Collection ➔ Cleaning ➔ Analysis ➔ Visualisation
 
 **Data Structure Analogy:**
-- **Structured:** Think of an Egg Carton — everything has a specific slot/cell.
-- **Unstructured:** Think of a bag of groceries — items are all mixed up; you have to sort them yourself.
-- **Semi-Structured:** In-between — has some organisation but no rigid schema (e.g. JSON).
+- **Structured:** Think of an Egg Carton — every slot is identical, fixed-size, and pre-defined. You know exactly where an egg goes and nothing else fits there.
+- **Semi-Structured:** Think of a Bento Box — it has compartments, so there's real organisation, but the compartments vary in size and count from box to box, and you can put anything in each one. No two bento boxes are laid out identically — just like two JSON documents can use different keys.
+- **Unstructured:** Think of a Grocery Bag — everything's jumbled together with zero compartments. You have to sort it all yourself before you can use anything.
 
 ![Structured, Semi-Structured & Unstructured Data Classification](assets/structured_semi_unstructured_data_classification.svg)
 
