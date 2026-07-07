@@ -29,7 +29,9 @@ Explain the difference between Data Analytics, Data Science, and Artificial Inte
 **Analogy:** Imagine a kitchen.
 - **Data Analytics** is checking the fridge to see what's left and writing a report on what was eaten (Historical).
 - **Data Science** is using that list to predict what ingredients you'll need for next week's dinner (Predictive).
-- **AI** is a robot chef that sees the fridge is empty and orders the groceries for you (Automated Action).
+- **AI** is a robot chef that sees the fridge is empty and decides on its own to order groceries — no recipe told it to (Autonomous Decision & Action).
+
+> **Note:** "Automated" isn't the same as "AI." A thermostat or a scheduled script is automated but not AI — it just executes a fixed rule someone wrote. What makes the robot chef AI is that it acts on a *learned or inferred* judgment call, autonomously, without a human approving that specific decision.
 
 ### 🛠️ Workshop: "The Company Diagnostic" (40 min)
 
