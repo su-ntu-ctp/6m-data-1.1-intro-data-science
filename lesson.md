@@ -109,6 +109,8 @@ Identify the 4 stages of a Data Pipeline and distinguish between Structured, Uns
 
 ![Structured, Semi-Structured & Unstructured Data Classification](assets/structured_semi_unstructured_data_classification.svg)
 
+A quick heads-up on one term: **JSON**. It's simply a way of writing down data with labels attached, like a sticky note that says `heart rate: 80, time: 12:00`. Computers love it because the labels say what each value means. It's more organised than a paragraph of text, but looser than a spreadsheet — which is why we call it "semi-structured."
+
 ### 🛠️ Activity 1: "The Smart Watch Data Pipeline" (20 min)
 
 **Scenario:** You are designing the data flow for a "Sleep Tracker" app.
